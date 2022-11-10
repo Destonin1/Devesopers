@@ -28,7 +28,6 @@
                             <li><a href="#portfolio">Портфолио</a></li>
                             <li><a href="#stages">Этапы</a></li>
                             <li><a href="#designers">Дизайнеры</a></li>
-                            <li><a href="#services">Услуги</a></li>
                         </ul>
                     </nav>
                     <button class="order-menu green-btn">Заказать</button>
@@ -65,7 +64,7 @@
                 <h3>Что входит в услугу по созданию дизайна интернет-магазина?</h3>
                 <div class="acor-container">         
                     <div class="acor-body">
-                        <input type="checkbox" name="chacor" id="chacor1" checked="checked" />
+                        <input type="checkbox" name="chacor" id="chacor1" />
                         <label for="chacor1">Дизайн портала</label>
                         <p class="acor-text">Дизайн портала — это оформление контента, совокупность всех графических элементов на веб-странице. Основная задача дизайна — познакомить
                              пользователя со страницей. Продуманный дизайн создает нужное впечатление о компании.</p>
@@ -194,24 +193,24 @@
                     <div class="portfolio-items">
                         <div class="portfolio-items__group">
                             <a href="#">
-                                <img class="img1" src="img/two-carts.jpg" alt="Тележки">
+                                <img class="img-portfolio" src="img/two-carts.jpg" alt="Тележки">
                             </a>
                             <a href="#">
-                                <img class="img1" src="img/dryer.jpg" alt="Фен">
+                                <img class="img-portfolio" src="img/dryer.jpg" alt="Фен">
                             </a>
                             <a href="#">
-                                <img class="img1" src="img/cake.jpg" alt="Торт">
+                                <img class="img-portfolio" src="img/cake.jpg" alt="Торт">
                             </a>
                         </div>
                         <div class="portfolio-items__group">
                             <a href="#">
-                                <img class="img1" src="img/flowers.jpg" alt="Цветы">
+                                <img class="img-portfolio" src="img/flowers.jpg" alt="Цветы">
                             </a>
                             <a href="#">
-                                <img class="img1" src="img/makeup.jpg" alt="Макияж">
+                                <img class="img-portfolio" src="img/makeup.jpg" alt="Макияж">
                             </a>
                             <a href="#">
-                                <img class="img1" src="img/colors.jpg" alt="Палитра">
+                                <img class="img-portfolio" src="img/colors.jpg" alt="Палитра">
                             </a> 
                         </div>
                         <div class="portfolio-items__hover">
@@ -275,10 +274,13 @@
             <div class="speak">
                 <h3>Обсудить проект</h3>
                 <p class="speak__text">Расскажите о своих бизнес-целях и мы поможем вам в их достижении</p>
-                <form class="speak__form">
-                    <input class="speak__input" type="text" placeholder="Имя">
-                    <input class="speak__input" type="tel" placeholder="Telegram/Viber">
-                    <input class="speak__input" type="email" placeholder="Email">
+                <form id="form-elem" class="speak__form" novalidate>
+                    <input id="input-name" class="speak__input" type="text" placeholder="Имя">
+                    <span id="name-error" class="speak__error"></span>
+                    <input id="input-phone" class="speak__input" type="tel" placeholder="Telegram/Viber">
+                    <span id="phone-error" class="speak__error"></span>
+                    <input id="input-email" class="speak__input" type="email" placeholder="Email">
+                    <span id="email-error" class="speak__error"></span>
                     <button class="green-btn" type="submit">Отправить</button>
                 </form>
             </div>
