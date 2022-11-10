@@ -21,7 +21,7 @@
                         <img src="img/logo.png" alt="Лого">
                     </a>
                 </div>
-                <div class="wrap">
+                <div class="wrap menu-wrap">
                     <nav class="menu">
                         <ul>
                             <li><a href="#services">Услуги</a></li>
@@ -30,6 +30,11 @@
                             <li><a href="#designers">Дизайнеры</a></li>
                         </ul>
                     </nav>
+                    <div class="menu-dots">
+                        <span class="menu-dots__item"></span>
+                        <span class="menu-dots__item"></span>
+                        <span class="menu-dots__item"></span>
+                    </div>
                     <button class="order-menu green-btn">Заказать</button>
                 </div>
             </div>           
@@ -113,9 +118,9 @@
     <section id="stages">
         <div class="container">
             <div class="stages">
-                <h3>Этапы разработки интернет-магазина</h3>
+                <h3>Этапы разработки <span class="nowrap">интернет-магазина</span></h3>
                 <div class="slider-wrap">
-                    <div class="slider">
+                    <div id="slider1" class="slider">
                         <div class="slider__item">
                             <div class="slider__item-wrap">
                                 <div class="slider__text-block">
@@ -190,7 +195,7 @@
             <div class="portfolio">
                 <h3>Примеры онлайн-магазинов</h3>
                 <div class="portfolio-items-wrap">
-                    <div class="portfolio-items">
+                    <div id="slider2" class="portfolio-items">
                         <div class="portfolio-items__group">
                             <a href="#">
                                 <img class="img-portfolio" src="img/two-carts.jpg" alt="Тележки">
@@ -252,7 +257,6 @@
     <section id="designers">
         <div class="container">
             <div class="designers">
-                <div class="designers__text-block">
                     <h3>Необходимо больше информации?</h3>
                     <p class="designers__text">
                         Если Вы владелец онлайн-магазина или только начинаете свой путь в электронной 
@@ -260,7 +264,7 @@
                         За выгодную цену и короткий период времени, он поможет  визуализировать ваш веб проект.
                     </p>
                     <button class="green-btn">Оставить заявку</button>
-                </div>
+                
                 <div class="designers__img">
                     <img src="img/info.png" alt="Планшет">
                 </div>

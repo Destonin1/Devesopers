@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.slider').slick({
+    $('#slider1').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         infinite: false,
@@ -144,3 +144,51 @@ formElem.addEventListener('submit', (e) => {
     }
 
 })
+
+/* Меню toggle  */
+
+const menuBtn = document.getElementsByClassName("menu-dots")[0];
+const menu = document.getElementsByClassName("menu")[0];
+
+menuBtn.addEventListener('click', (e) => {
+    menu.classList.toggle('menu-active');
+    e.stopPropagation()
+})
+
+function menuClose() {
+    menu.classList.remove('menu-active');
+}
+
+const links = document.querySelectorAll('.menu a');
+
+links.forEach((link)=> {
+    link.addEventListener('click', menuClose);
+})
+
+window.addEventListener('click', function(e){
+    if (!document.getElementsByClassName('menu')[0].contains(e.target)){
+        menuClose()
+    }
+});
+
+/* Портфолио слайдер */
+
+if (window.matchMedia("(max-width: 850px)").matches) {
+    $('#slider2').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false,
+        nextArrow: '<button class="arr-next"></button>',
+        prevArrow: '<button class="arr-previous"></button>',
+        responsive: [
+            {
+              breakpoint: 780,
+              settings: {
+                slidesToShow: 1,
+                centerMode: true,
+              }
+            }
+        ]
+   
+    });
+  } 
