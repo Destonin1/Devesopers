@@ -1152,6 +1152,7 @@ footer {
   .menu a {
     font-size: 17px;
     font-weight: 800;
+    text-transform: uppercase;
   }
   .menu-active {
     -webkit-transform: translateY(0);
@@ -1512,7 +1513,7 @@ footer {
             transform: translateX(50%);
   }
   h1 {
-    font-size: 27px;
+    font-size: 26px;
     text-align: left;
     text-transform: uppercase;
   }
