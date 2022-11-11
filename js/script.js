@@ -75,11 +75,7 @@ inputPhone.addEventListener('blur', () => {
     const value = inputPhone.value;
     let errorText = "";
     
-    if(value.length < 11  && value !== '') {
-        errorText = "Длина телефона должна быть меньше 11 символов";
-        isErrorPhone = true;
-    }
-    else if(!isMobilePhone(value) && value !== '') {
+    if(!isMobilePhone(value) && value !== '') {
         errorText = "Некорректный номер телефона";
         isErrorPhone = true;
     }
