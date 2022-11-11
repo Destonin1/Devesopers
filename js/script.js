@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    /* Этапы разработки слайдер */
     $('#slider1').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -22,7 +24,34 @@ $(document).ready(function(){
             }
           ]
     });
+
+    /* Портфолио слайдер */
+
+    $('#slider2').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false,
+        nextArrow: '<button class="arr-next"></button>',
+        prevArrow: '<button class="arr-previous"></button>',
+        responsive: [
+            {
+                breakpoint: 3000,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                slidesToShow: 1,
+                }
+            }
+        ],
+    
+    });
 });
+
+
+
+/* Валидация формы */
 
 const inputName = document.getElementById('input-name');
 const nameError = document.getElementById('name-error');
@@ -107,6 +136,7 @@ inputEmail.addEventListener('focus', () => {
     inputEmail.classList.remove("speak__input-error");
 })
 
+/*После нажатия отправить*/
 
 const formElem = document.getElementById('form-elem');
 
@@ -147,11 +177,13 @@ formElem.addEventListener('submit', (e) => {
 
 /* Меню toggle  */
 
+
 const menuBtn = document.getElementsByClassName("menu-dots")[0];
 const menu = document.getElementsByClassName("menu")[0];
 
 menuBtn.addEventListener('click', (e) => {
     menu.classList.toggle('menu-active');
+    console.log(1);
     e.stopPropagation()
 })
 
@@ -170,25 +202,3 @@ window.addEventListener('click', function(e){
         menuClose()
     }
 });
-
-/* Портфолио слайдер */
-
-if (window.matchMedia("(max-width: 850px)").matches) {
-    $('#slider2').slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: false,
-        nextArrow: '<button class="arr-next"></button>',
-        prevArrow: '<button class="arr-previous"></button>',
-        responsive: [
-            {
-              breakpoint: 780,
-              settings: {
-                slidesToShow: 1,
-                centerMode: true,
-              }
-            }
-        ]
-   
-    });
-  } 
